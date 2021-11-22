@@ -30,5 +30,5 @@ app.get('/', (req, res) => {
 const port = process.env.PORT || config.port;
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Monee at http://localhost:${port}`);
 });
