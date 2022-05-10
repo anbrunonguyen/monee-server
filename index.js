@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import userRoutes from './routes/user.js';
+import walletRoutes from './routes/wallet.js';
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use('/user', userRoutes);
+app.use('/wallet', walletRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello to Monee Server ' + config.version);
